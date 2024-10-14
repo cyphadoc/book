@@ -143,7 +143,7 @@ in memory, adding a new element onto the end of the vector might require
 allocating new memory and copying the old elements to the new space, if there
 isn’t enough room to put all the elements next to each other where the vector
 is currently stored. In that case, the reference to the first element would be
-pointing to deallocated memory. The borrowing rules prevent programs from
+pointing to the reallocated memory. The borrowing rules prevent programs from
 ending up in that situation.
 
 > Note: For more on the implementation details of the `Vec<T>` type, see [“The
